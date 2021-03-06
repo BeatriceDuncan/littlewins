@@ -1,3 +1,43 @@
 .App {
   text-align: center;
 }
+
+/* * {
+  border: solid 1px lavender;
+} */
+
+header {
+  margin: 20px;
+}
+
+form {
+  border: solid 1px navy;
+  padding: 20px;
+}
+
+.dayInput input {
+  width: 200px;
+}
+
+form .eachWin {
+  margin: 20px;
+}
+
+.weekOfWins {
+  border: 1px solid sienna;
+  display: flex;
+}
+
+.eachDay {
+  border: 1px solid mediumaquamarine;
+  margin: 20px;
+  padding: 10px;
+}
+
+input {
+  background-color: honeydew;
+}
+
+span {
+  color: salmon;
+}
