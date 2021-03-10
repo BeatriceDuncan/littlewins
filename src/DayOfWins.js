@@ -15,7 +15,7 @@ const DayOfWins = (props) => {
   
   return (
     <li className='eachDay'>
-      <span aria-label="delete these wins" className="deleteWin" onClick={() => {handleClick(props.inputs.uniqueKey)}}>X</span>
+      <span className="deleteWin" onClick={() => {handleClick(props.inputs.uniqueKey)}}>X</span>
       <h3>{dayId}</h3>
       <ol>
         <li><div className="winIcon"></div>{win1}</li>
