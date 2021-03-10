@@ -1,4 +1,3 @@
-
 const DayOfWins = (props) => {
   const {
     dayId,
@@ -10,9 +9,9 @@ const DayOfWins = (props) => {
     <li className='eachDay'>
       <h3>{dayId}</h3>
       <ol>
-        <li>{win1}</li>
-        <li>{win2}</li>
-        <li>{win3}</li>
+        <li><div className="winIcon"></div>{win1}</li>
+        <li><div className="winIcon"></div>{win2}</li>
+        <li><div className="winIcon"></div>{win3}</li>
       </ol>
     </li>
   );

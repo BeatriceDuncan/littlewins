@@ -2,6 +2,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
   background-image: url(./assets/blueRiceWithMustard.png);
@@ -131,16 +135,32 @@ button:focus {
 
 .eachDay {
   border: solid 4px #e1ad01;
-  margin: 10px;
+  margin: 15px;
   padding: 10px;
-  width: 160px;
+  width: 170px;
+  height: fit-content;
+}
+
+.eachDay li {
+  line-height: 1.1rem;
+  margin: 15px 0;
+  text-align: left;
+  display: flex;
+}
+
+.eachDay .winIcon {
+  min-height: 10px;
+  max-height: 10px;
+  min-width: 10px;
+  max-width: 10px;
+  margin-top: 5px;
 }
 
 h3 {
   font-weight: 600;
 }
 
-#about p {
+.about p {
   margin-top: 20px;
   text-align: left;
 }

@@ -1,10 +1,8 @@
-// import react from 'react';
-
 const Footer = () => {
   return (
     <footer>
       <p className="credit">
-        <span>little wins</span> concept credit to{" "}
+        I first learned about <span>little wins</span> from {" "}
         <a href="https://bigfeels.club/">The Big Feels Club</a>
       </p>
       <p>

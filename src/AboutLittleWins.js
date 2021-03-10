@@ -1,8 +1,8 @@
 const AboutLittleWins = () => {
   return (
-    <section id="about" className="wrapper">
+    <section id="about" className="about wrapper">
       <h2>
-        what are <span className="littlewinsText">little wins</span>?
+        what are <span>little wins</span>?
       </h2>
 
       <p>
@@ -22,21 +22,21 @@ const AboutLittleWins = () => {
       <p>
         Some days though, or some moments, folks are able to push through the
         struggle and do the things they need to do to take care of themselves.
-        These are the <span className="littlewinsText">little wins</span>! When
+        These are the <span>little wins</span>! When
         brushing your teeth feels really hard, but you push through and get
         those teeth clean, you have won that battle! Taking note of these{" "}
-        <span className="littlewinsText">little wins</span> can enable you to
+        <span>little wins</span> can enable you to
         notice just how much you have accomplished each day. It can help you see
         the fruits of all your hard work and notice the completion of these
         tasks as achievements. Paying attention to the{" "}
-        <span className="littlewinsText">little wins</span> can feel encouraging
+        <span>little wins</span> can feel encouraging
         and productive. Noticing and feeling progress can help you to not feel
         so stuck.
       </p>
 
       <p>
         If this sounds like you, feel free to track your{" "}
-        <span className="littlewinsText">little wins</span> here. Watch them
+        <span>little wins</span> here. Watch them
         grow each day and each week. Your hard work deserves to be noticed and
         celebrated! Good luck!
       </p>
