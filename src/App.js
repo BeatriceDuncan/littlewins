@@ -5,6 +5,7 @@ import Header from "./Header";
 import DayOfWins from "./DayOfWins";
 import AboutLittleWins from "./AboutLittleWins";
 import Footer from "./Footer";
+import Win from "./Win";
 
 function App() {
   const [dayArray, setDayArray] = useState([]);
@@ -22,7 +23,6 @@ function App() {
       const objectOfDays = data.val();
       const arrayOfDays = [];
       for (let eachDay in objectOfDays) {
-        // console.log(objectOfDays[eachDay])
         arrayOfDays.push({
           uniqueKey: eachDay,
           dayId: objectOfDays[eachDay].dayInput,
@@ -46,7 +46,12 @@ function App() {
     event.preventDefault();
     const dbref = firebase.database().ref();
     dbref.push(inputs);
-    setInputs("");
+    setInputs({
+      dayInput: "",
+      win1input: "",
+      win2input: "",
+      win3input: "",
+    });
   };
 
   return (
@@ -55,63 +60,24 @@ function App() {
       <main>
         <form action="" onSubmit={handleSubmit} className="wrapper">
           <h2>today's little wins:</h2>
-
           <div className="dayInput">
             <label htmlFor="dayInput">today is:</label>
             <input
-              placeholder="Monday   /   Day 1   /   01.10.21"
-              type="text"
-              onChange={handleChange}
-              value={inputs.dayInput}
-              name="dayInput"
-            />
+              placeholder="Monday   /   Day 1   /   01.10.21" type="text" onChange={handleChange} value={inputs.dayInput} name="dayInput"/>
           </div>
-
-          <div className="eachWin">
-            <label className="winIcon" htmlFor="win1"></label>
-            <input
-              placeholder="Today I..."
-              type="text"
-              value={inputs.win1input}
-              onChange={handleChange}
-              name="win1input"
-            />
-          </div>
-
-          <div className="eachWin">
-            <label className="winIcon" htmlFor="win2"></label>
-            <input
-              placeholder="and..."
-              type="text"
-              value={inputs.win2input}
-              onChange={handleChange}
-              name="win2input"
-            />
-          </div>
-
-          <div className="eachWin">
-            <label className="winIcon" htmlFor="win3"></label>
-            <input
-              placeholder="and..."
-              type="text"
-              value={inputs.win3input}
-              onChange={handleChange}
-              name="win3input"
-            />
-          </div>
-
+          <Win placeholder={"Today I..."} name={"win1input"} inputs={inputs.win1input} handleChange={handleChange}/>
+          <Win placeholder={"and..."} name={"win2input"} inputs={inputs.win2input} handleChange={handleChange}/>
+          <Win placeholder={"and..."} name={"win3input"} inputs={inputs.win3input} handleChange={handleChange}/>
           <button>I did it!</button>
         </form>
-
         <div className="weekOfWins wrapper">
           <h2>all my little wins</h2>
           <ol className="weekOfWinsOl">
             {dayArray.map((day) => {
-              return <DayOfWins key={day.uniqueKey} inputs={day} />;
+              return <DayOfWins key={day.uniqueKey} inputs={day}/>;
             })}
           </ol>
         </div>
-
         <AboutLittleWins />
       </main>
       <Footer />
