@@ -20,17 +20,18 @@ function App() {
 
     dbref.on("value", (data) => {
       const objectOfDays = data.val();
-      const dayState = [];
+      const arrayOfDays = [];
       for (let eachDay in objectOfDays) {
-        dayState.push({
+        // console.log(objectOfDays[eachDay])
+        arrayOfDays.push({
           uniqueKey: eachDay,
-          dayId: objectOfDays[eachDay].dayId,
-          win1: objectOfDays[eachDay].win1,
-          win2: objectOfDays[eachDay].win2,
-          win3: objectOfDays[eachDay].win3,
+          dayId: objectOfDays[eachDay].dayInput,
+          win1: objectOfDays[eachDay].win1input,
+          win2: objectOfDays[eachDay].win2input,
+          win3: objectOfDays[eachDay].win3input,
         });
       }
-      setDayArray(dayState);
+      setDayArray(arrayOfDays);
     });
   }, []);
 
@@ -105,8 +106,8 @@ function App() {
         <div className="weekOfWins wrapper">
           <h2>all my little wins</h2>
           <ol className="weekOfWinsOl">
-            {dayArray.map((inputs) => {
-              return <DayOfWins key={inputs.uniqueKey} inputs={inputs} />;
+            {dayArray.map((day) => {
+              return <DayOfWins key={day.uniqueKey} inputs={day} />;
             })}
           </ol>
         </div>

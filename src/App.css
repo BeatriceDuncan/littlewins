@@ -126,7 +126,7 @@ button:focus {
 .weekOfWinsOl {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .eachDay {
@@ -188,10 +188,6 @@ footer {
   label {
     width: 10%;
     margin-right: 10px;
-  }
-
-  .weekOfWins {
-    justify-content: center;
   }
 
   h2 {
