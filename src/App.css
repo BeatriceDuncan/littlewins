@@ -136,9 +136,28 @@ button:focus {
 .eachDay {
   border: solid 4px #e1ad01;
   margin: 15px;
-  padding: 10px;
+  padding: 20px 10px 15px;
   width: 170px;
   height: fit-content;
+  position: relative;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+.deleteWin {
+  position: absolute;
+  z-index: 1;
+  right: 12px;
+  top: 2px;
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.deleteWin:hover{
+  opacity: 100%;
+  transition: all 0.3s ease;
 }
 
 .eachDay li {
@@ -154,10 +173,6 @@ button:focus {
   min-width: 10px;
   max-width: 10px;
   margin-top: 5px;
-}
-
-h3 {
-  font-weight: 600;
 }
 
 .about p {
