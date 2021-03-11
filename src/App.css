@@ -151,12 +151,12 @@ h3 {
   z-index: 1;
   right: 12px;
   top: 2px;
-  opacity: 50%;
+  color: rgba(225, 173, 1, 0.5);
   cursor: pointer;
 }
 
 .deleteWin:hover{
-  opacity: 100%;
+  color: rgba(225, 173, 1, 1);
   transition: all 0.3s ease;
 }
 
