@@ -63,13 +63,14 @@ h1 {
   background: url(./assets/bluerice.png) center / cover;
   color: rgba(255, 255, 255, 1);
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 }
 
+
+/* I had used opacity here (also on deleteWins) which worked on live site, but stopped working once I deployed to Netifly */
 .aboutLink:focus,
 .aboutLink:hover {
   background: url(./assets/bluericeTransparent.png) center / cover;
-  transition: all 0.3s ease;
   color: rgba(255, 255, 255, 1);
 }
 
