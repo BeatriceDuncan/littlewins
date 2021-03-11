@@ -63,11 +63,12 @@ h1 {
   background: url(./assets/bluerice.png) center / cover;
   color: rgba(255, 255, 255, 1);
   font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .aboutLink:focus,
 .aboutLink:hover {
-  opacity: 75%;
+  background: url(./assets/bluericeTransparent.png) center / cover;
   transition: all 0.3s ease;
   color: rgba(255, 255, 255, 1);
 }
